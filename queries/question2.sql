@@ -1,0 +1,1 @@
+SELECT AVG(match_score) FROM resume;
