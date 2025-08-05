@@ -38,26 +38,26 @@ CREATE TABLE resume(
 );
 ```
 # Analysis
-### What is the average match_score for job descriptions that include 'Data Scientist'.
+#### What is the average match_score for job descriptions that include 'Data Scientist'.
 ```sql
 SELECT AVG(match_score)
 FROM resume
 WHERE job_description LIKE "%Data Scientist%";
 ```
-### Retrieve the top 5 job_description and resume pairs ordered by match_score in descending order.
+#### Retrieve the top 5 job_description and resume pairs ordered by match_score in descending order.
 ```sql
 SELECT job_description,resume,match_score
 FROM resume
 ORDER BY match_score DESC
 LIMIT 5;
 ```
-### Count how many resume entries mention 'Python'.
+#### Count how many resume entries mention 'Python'.
 ```sql
 SELECT COUNT(*)
 FROM resume
 WHERE resume LIKE "%Python%";
 ```
-### What is the average match_score across all entries?
+#### What is the average match_score across all entries?
 ```sql
 SELECT AVG(match_score) FROM resume;
 ```
